@@ -11,6 +11,7 @@ if has('vim_starting')
 endif
 
 NeoBundle 'https://github.com/tpope/vim-fugitive.git'
+NeoBundle 'https://github.com/Shougo/vimshell.vim.git'
 
 filetype plugin on
 filetype indent on
