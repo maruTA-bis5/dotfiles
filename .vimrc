@@ -25,6 +25,8 @@ let g:memolist_memo_suffix = "html"
 let g:memolist_unite = 1
 let g:memolist_unite_option = "-auto-preview -start-insert"
 
+NeoBundleCheck
+
 filetype plugin indent on
 filetype indent on
 syntax on
@@ -38,5 +40,7 @@ set autoindent
 set number
 set ts=4
 set shiftwidth=4
+set softtabstop=4
 set noexpandtab
+set modeline
 
