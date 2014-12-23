@@ -6,3 +6,6 @@
 	st = status
 	co = commit
 
+[core]
+	filemode = false
+	editor = vim

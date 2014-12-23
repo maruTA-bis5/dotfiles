@@ -21,9 +21,11 @@ NeoBundle 'thinca/vim-quickrun' " \r
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
 let g:memolist_path = "~/memo"
-let g:memolist_memo_suffix = "html"
+let g:memolist_memo_suffix = "markdown"
 let g:memolist_unite = 1
 let g:memolist_unite_option = "-auto-preview -start-insert"
+NeoBundle 'yuratomo/w3m.vim'
+NeoBundle 'KamunagiChiduru/vim-edit-properties'
 
 filetype plugin indent on
 filetype indent on
@@ -40,3 +42,4 @@ set ts=4
 set shiftwidth=4
 set noexpandtab
 
+set fileencodings=ucs-bom,utf-8,iso-2022-jp,cp932,euc-jp,default,latin
