@@ -27,6 +27,8 @@ let g:memolist_unite_option = "-auto-preview -start-insert"
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'KamunagiChiduru/vim-edit-properties'
 
+NeoBundleCheck
+
 filetype plugin indent on
 filetype indent on
 syntax on
@@ -40,6 +42,8 @@ set autoindent
 set number
 set ts=4
 set shiftwidth=4
+set softtabstop=4
 set noexpandtab
+set modeline
 
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,cp932,euc-jp,default,latin
