@@ -20,18 +20,26 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun' " \r
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
+nnoremap ,mc :MemoNew<cr>
+nnoremap ,ml :MemoList<cr>
 let g:memolist_path = "~/memo"
 let g:memolist_memo_suffix = "markdown"
 let g:memolist_unite = 1
 let g:memolist_unite_option = "-auto-preview -start-insert"
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'KamunagiChiduru/vim-edit-properties'
+NeoBundle 'tpope/vim-markdown'
+NeoBundle 'h1mesuke/vim-alignta'
 
 NeoBundleCheck
 
 filetype plugin indent on
 filetype indent on
 syntax on
+
+nnoremap :vimrc :e ~/.vimrc<cr>
+nnoremap :unb :Unite buffer<cr>
+nnoremap :unf :Unite file<cr>
 
 set noswapfile
 set backspace=indent,eol,start
