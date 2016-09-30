@@ -20,16 +20,25 @@ NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun' " \r
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
-nnoremap ,mc :MemoNew<cr>
-nnoremap ,ml :MemoList<cr>
+nnoremap <Leader>mn :MemoNew<cr>
+nnoremap <Leader>ml :MemoList<cr>
+nnoremap <Leader>mg :MemoGrep<cr>
 let g:memolist_path = "~/memo"
 let g:memolist_memo_suffix = "markdown"
 let g:memolist_unite = 1
 let g:memolist_unite_option = "-auto-preview -start-insert"
+" XXX memo_templateもdotfilesで管理した方がいい?
+let g:memolist_template_dir_path = "$HOME/memo_template"
 NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'KamunagiChiduru/vim-edit-properties'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'h1mesuke/vim-alignta'
+NeoBundle 'kannokanno/previm'
+let g:previm_open_cmd = "cygstart"
+augroup PrevimSettings
+	autocmd!
+	autocmd BufNewFile,BufRead *.{md,mdwn.mkd,mkdn,mark*} set filetype=markdown
+augroup END
 
 NeoBundleCheck
 
@@ -40,7 +49,10 @@ syntax on
 nnoremap :vimrc :e ~/.vimrc<cr>
 nnoremap :unb :Unite buffer<cr>
 nnoremap :unf :Unite file<cr>
+nnoremap :una :Unite file buffer<cr>
+nnoremap :reload :source ~/.vimrc<cr>
 
+set noundofile
 set noswapfile
 set backspace=indent,eol,start
 set ruler
@@ -53,5 +65,6 @@ set shiftwidth=4
 set softtabstop=4
 set noexpandtab
 set modeline
+colorscheme elflord
 
 set fileencodings=ucs-bom,utf-8,iso-2022-jp,cp932,euc-jp,default,latin
