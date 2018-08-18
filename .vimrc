@@ -18,6 +18,12 @@ NeoBundle 'Shougo/vimproc', {
 NeoBundle 'Shougo/vimshell'
 NeoBundle 'Shougo/unite.vim'
 NeoBundle 'thinca/vim-quickrun' " \r
+let g:quickrun_config = {}
+let g:quickrun_config.plantuml = {
+	\ 'type': 'plantuml',
+	\ 'exec': ['plantuml -tutxt -o /tmp/quickrun-plantuml %s', 'cat /tmp/quickrun-plantuml/%s:t:r.utxt'],
+	\ 'cmdopt': '-tutxt -o /tmp/quickrun-plantuml',
+    \ }
 NeoBundle 'tpope/vim-fugitive'
 NeoBundle 'glidenote/memolist.vim'
 nnoremap <Leader>mn :MemoNew<cr>
@@ -33,12 +39,13 @@ NeoBundle 'yuratomo/w3m.vim'
 NeoBundle 'KamunagiChiduru/vim-edit-properties'
 NeoBundle 'tpope/vim-markdown'
 NeoBundle 'h1mesuke/vim-alignta'
-NeoBundle 'kannokanno/previm'
+NeoBundle 'previm/previm'
 let g:previm_open_cmd = "cygstart"
 augroup PrevimSettings
 	autocmd!
 	autocmd BufNewFile,BufRead *.{md,mdwn.mkd,mkdn,mark*} set filetype=markdown
 augroup END
+NeoBundle 'aklt/plantuml-syntax'
 
 NeoBundleCheck
 
